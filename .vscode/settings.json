@@ -3,5 +3,6 @@
     "node_modules{,/**}",
     ".vscode{,/**}"
   ],
-  "appService.deploySubpath": "."
+  "appService.deploySubpath": ".",
+  "appService.defaultWebAppToDeploy": "/subscriptions/2b70c71f-3ac4-4a57-8042-2249694d66bc/resourceGroups/doctorb-rg/providers/Microsoft.Web/sites/doctorb"
 }

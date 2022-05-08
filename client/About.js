@@ -6,9 +6,9 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import { FaFilePdf } from "react-icons/fa";
-import Instagram from "./InstaWidget";
+// import Instagram from "./InstaWidget";
 import TwitterDisplay from "./TwitterDisplay";
-import ErrorBoundary from "./ErrorBoundary"
+// import ErrorBoundary from "./ErrorBoundary"
 
 class About extends Component {
   render() {
@@ -67,24 +67,24 @@ class About extends Component {
           </Col>
         </Row>
 
-        <Row className="justify-content-center mt-3">
-          <Col xs={12} xl={4} className="pt-4 pb-2">
+        <Row className="justify-content-center mt-3" style={{alignContent: 'flex-start'}}>
+          <Col xs={12} md={4} className="pt-4 pb-2">
             <Card
               className="shadow"
               style={{
                 borderWidth: 2,
                 borderColor: "#74b4ca",
-                height: 470
+                height: 500
               }}
             >
               <Card.Body>
-                <Card.Img variant="top" src="/show-pics/operating.jpg" />
+                <Card.Img variant="top" src="/show-pics/operating.jpg" style={{maxHeight: 'auto', width: '100%'}}/>
 
+                <Card.Text>
                 <h4 className="mt-2"> Chance Favors the Prepared</h4>
                 <p style={{ fontSize: "14px" }}>
                   <i>by Danielle Wong Moores</i>
                 </p>
-                <Card.Text>
                   Surgeon, innovator, radio host — Dr. Todd Berland is always
                   looking for the next opportunity.
                 </Card.Text>
@@ -94,7 +94,7 @@ class About extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
+          {/* <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
             <Card
               className="shadow"
               style={{
@@ -121,14 +121,14 @@ class About extends Component {
                 <Card.Link href="#contact">contact Dr. Berland</Card.Link>
               </Card.Body>
             </Card>
-          </Col>
-          <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
+          </Col> */}
+          <Col xs={12} md={4} className="pt-4 pb-2 mb-3">
             <Card
               className="shadow"
               style={{
                 borderWidth: 2,
                 borderColor: "#74b4ca",
-                height: 470
+                height: 500
               }}
             >
               <Card.Body>
@@ -154,16 +154,16 @@ class About extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={10} md={4}>
-            <TwitterDisplay twitterLoaded={false} />
-          </Col>
           {/* <Col md={1} />
           <Col xs={10} md={4}>
-            <ErrorBoundary>
-            <Instagram />
-            </ErrorBoundary>
-          </Col> */}
+          <ErrorBoundary>
+          <Instagram />
+          </ErrorBoundary>
+        </Col> */}
         </Row>
+        <Col xs={10} md={4} style={{alignSelf: "center"}}>
+          <TwitterDisplay twitterLoaded={false} />
+        </Col>
       </Container>
     );
   }
