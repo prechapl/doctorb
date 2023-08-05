@@ -11,6 +11,7 @@ import TwitterDisplay from "./TwitterDisplay";
 // import ErrorBoundary from "./ErrorBoundary"
 
 class About extends Component {
+
   render() {
     return (
       <Container className="d-flex flex-column">
@@ -22,8 +23,8 @@ class About extends Component {
                 src="/toddberland-500px.jpg"
                 fluid
               />
-
               <Button
+                target="_blank"
                 href="/cv.pdf"
                 className="mt-4"
                 style={{
