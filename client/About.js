@@ -24,7 +24,7 @@ class About extends Component {
               />
 
               <Button
-                href="/cv_7-23.pdf"
+                href="/cv.pdf"
                 className="mt-4"
                 style={{
                   background: "#74b4ca",
