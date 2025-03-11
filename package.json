@@ -44,7 +44,7 @@
     "react-mapbox-gl": "^4.6.0",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
-    "sequelize": "^5.15.1",
+    "sequelize": "^6.29.0",
     "volleyball": "^1.5.1",
     "yup": "^0.27.0"
   },
