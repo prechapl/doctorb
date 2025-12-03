@@ -10,7 +10,8 @@
     "start": "node index.js",
     "webpack": "webpack",
     "webpack:dev": "npm run webpack -- --mode=development --watch",
-    "start:dev": "npm run webpack:dev & nodemon index.js --ignore /client --ignore /public"
+    "start:dev": "npm run webpack:dev & nodemon index.js --ignore /client --ignore /public",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "react-map-gl": "^5.0.10",
     "react-mapbox-gl": "^4.6.0",
     "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
     "redux": "^4.0.4",
     "sequelize": "^5.15.1",
     "volleyball": "^1.5.1",
