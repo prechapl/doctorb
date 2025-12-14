@@ -7,6 +7,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import Image from 'react-bootstrap/Image';
 import ContactForm from './ContactForm';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+// import FacebookDisplay from './FacebookDisplay'; // Disabled due to Facebook SDK errors
 
 class Show extends Component {
   constructor() {
@@ -106,14 +107,13 @@ class Show extends Component {
             {this.state.formVisible ? <ContactForm /> : null}
           </Row>
 
-          {/* <Row className="m-2 ">
-            <Col xs={10} md={6}>
-              <TwitterDisplay twitterLoaded={false} />
+          {/* Facebook Feed from SiriusXM Doctor Radio - Disabled due to Facebook SDK errors
+          <Row className="mt-5 justify-content-center">
+            <Col xs={12} md={8} lg={6}>
+              <FacebookDisplay />
             </Col>
-            <Col xs={10} md={6}>
-              <Instagram />
-            </Col>
-          </Row> */}
+          </Row>
+          */}
         </Container>
       </Fragment>
     );

@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import { FaFilePdf } from "react-icons/fa";
 // import Instagram from "./InstaWidget";
-import TwitterDisplay from "./TwitterDisplay";
+import FacebookDisplay from "./FacebookDisplay";
 
 class About extends Component {
   render() {
@@ -154,9 +154,11 @@ class About extends Component {
             </Card>
           </Col>
 
+          {/* Facebook feed disabled for now - needs proper page URL
           <Col xs={10} md={4}>
-            <TwitterDisplay twitterLoaded={false} />
+            <FacebookDisplay />
           </Col>
+          */}
         </Row>
       </Container>
     );
