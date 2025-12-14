@@ -13,6 +13,8 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import ContactFormSendPopup from './ContactFormSendPopup';
+// Remove config import - we'll use Firebase Functions directly
+// import config from './config';
 
 const ContactSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -66,9 +68,9 @@ export default function ContactForm() {
               }}
               validationSchema={ContactSchema}
               onSubmit={(values, actions) => {
-                // Send values to server API
+                // Send values to Firebase Function
                 axios
-                  .post('/api/users/messages', values)
+                  .post('https://us-central1-drberland-6404c.cloudfunctions.net/api/users/messages', values)
                   .then(message => {
                     actions.setSubmitting(false);
                     actions.resetForm({
@@ -225,6 +227,7 @@ export default function ContactForm() {
                       label={<div>Please agree to our <Link to ="/termsandconditions">terms and conditions</Link></div>}
                       feedback={errors.terms}
                       onChange={handleChange}
+                      checked={values.terms}
                       isInvalid={touched.terms && !!errors.terms}
                     />
                   </Form.Group>

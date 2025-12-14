@@ -5,17 +5,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 class Publications extends Component {
-  componentDidMount() {
-    (() => {
-      var st = document.createElement("script");
-      st.type = "text/javascript";
-      st.async = true;
-      st.src =
-        "https://www.researchgate.net/javascript/plugin/plugin-api-min.js";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(st, s);
-    })();
-  }
+  // ResearchGate widget removed - their X-Frame-Options policy blocks embedding
+  // componentDidMount() {
+  //   (() => {
+  //     var st = document.createElement("script");
+  //     st.type = "text/javascript";
+  //     st.async = true;
+  //     st.src =
+  //       "https://www.researchgate.net/javascript/plugin/plugin-api-min.js";
+  //     var s = document.getElementsByTagName("script")[0];
+  //     s.parentNode.insertBefore(st, s);
+  //   })();
+  // }
 
   render() {
     return (
@@ -265,19 +266,36 @@ class Publications extends Component {
               </Card>
             </Col>
             <Col xs={12} md={5}>
-              <Row style={{ offset: 8 }} className="justify-content-center">
-                <div
-                  className="shadow mt-3 mb-3 rg-plugin"
-                  data-stats="true"
-                  data-faces="true"
-                  data-publications="true"
-                  data-height="600"
-                  data-width="350"
-                  data-theme="light"
-                  data-type="department"
-                  data-installationId="5d5df620f8ea5243076660f2"
-                />
-              </Row>
+              <Card
+                style={{
+                  padding: 1,
+                  marginTop: 5,
+                  borderWidth: 2,
+                  borderColor: "#74b4ca"
+                }}
+                className="shadow"
+              >
+                <Card.Header>Research Publications</Card.Header>
+                <Card.Body>
+                  <Card.Text>
+                    View Dr. Berland's complete publication list and research profile on ResearchGate
+                  </Card.Text>
+                  <a 
+                    href="https://www.researchgate.net/profile/Todd_Berland" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    style={{ backgroundColor: "#00ccbb", borderColor: "#00ccbb" }}
+                  >
+                    View ResearchGate Profile
+                  </a>
+                  <div className="mt-3">
+                    <small className="text-muted">
+                      ResearchGate is a professional network for scientists and researchers to share papers, ask and answer questions, and find collaborators.
+                    </small>
+                  </div>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </Container>

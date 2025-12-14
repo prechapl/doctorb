@@ -6,12 +6,10 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import { FaFilePdf } from "react-icons/fa";
-import TwitterDisplay from "./TwitterDisplay";
 // import Instagram from "./InstaWidget";
-// import ErrorBoundary from "./ErrorBoundary"
+import FacebookDisplay from "./FacebookDisplay";
 
 class About extends Component {
-
   render() {
     return (
       <Container className="d-flex flex-column">
@@ -23,8 +21,8 @@ class About extends Component {
                 src="/toddberland-500px.jpg"
                 fluid
               />
+
               <Button
-                target="_blank"
                 href="/cv.pdf"
                 className="mt-4"
                 style={{
@@ -42,8 +40,8 @@ class About extends Component {
           <Col className="mt-2 p-4">
             <p style={{ textIndent: "40px" }} className="lead">
               Dr. Berland is a world renowned vascular surgeon based in New York
-              City. He is listed in Castle Connolly “America’s Top Doctors” and 
-              has been a member of Alpha Omega Alpha, America’s top
+              City. He is listed in Castle Connolly “America’s Top Doctors” for
+              2019 and has been a member of Alpha Omega Alpha, America’s top
               Medical Society, since 2003. Dr. Berland is published extensively
               and is the principal investigator for several ongoing research
               trials. Dr. Berland is also the host of the “Vascular Surgery
@@ -68,24 +66,24 @@ class About extends Component {
           </Col>
         </Row>
 
-        <Row className="justify-content-center mt-3" style={{alignContent: 'flex-start'}}>
-          <Col xs={12} md={4} className="pt-4 pb-2">
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} xl={4} className="pt-4 pb-2">
             <Card
               className="shadow"
               style={{
                 borderWidth: 2,
                 borderColor: "#74b4ca",
-                height: 500
+                height: 470
               }}
             >
               <Card.Body>
-                <Card.Img variant="top" src="/show-pics/operating.jpg" style={{maxHeight: 'auto', width: '100%'}}/>
+                <Card.Img variant="top" src="/show-pics/operating.jpg" />
 
-                <Card.Text>
                 <h4 className="mt-2"> Chance Favors the Prepared</h4>
                 <p style={{ fontSize: "14px" }}>
                   <i>by Danielle Wong Moores</i>
                 </p>
+                <Card.Text>
                   Surgeon, innovator, radio host — Dr. Todd Berland is always
                   looking for the next opportunity.
                 </Card.Text>
@@ -95,7 +93,7 @@ class About extends Component {
               </Card.Body>
             </Card>
           </Col>
-          {/* <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
+          <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
             <Card
               className="shadow"
               style={{
@@ -122,14 +120,14 @@ class About extends Component {
                 <Card.Link href="#contact">contact Dr. Berland</Card.Link>
               </Card.Body>
             </Card>
-          </Col> */}
-          <Col xs={12} md={4} className="pt-4 pb-2 mb-3">
+          </Col>
+          <Col xs={12} xl={4} className="pt-4 pb-2 mb-3">
             <Card
               className="shadow"
               style={{
                 borderWidth: 2,
                 borderColor: "#74b4ca",
-                height: 500
+                height: 470
               }}
             >
               <Card.Body>
@@ -155,16 +153,13 @@ class About extends Component {
               </Card.Body>
             </Card>
           </Col>
-          {/* <Col md={1} />
+
+          {/* Facebook feed disabled for now - needs proper page URL
           <Col xs={10} md={4}>
-          <ErrorBoundary>
-          <Instagram />
-          </ErrorBoundary>
-        </Col> */}
+            <FacebookDisplay />
+          </Col>
+          */}
         </Row>
-        <Col xs={10} md={4} style={{alignSelf: "center"}}>
-          <TwitterDisplay twitterLoaded={false} />
-        </Col>
       </Container>
     );
   }
